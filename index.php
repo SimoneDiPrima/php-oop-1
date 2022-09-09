@@ -22,6 +22,9 @@ class Movies
         $this->year=$_year;
         
     }
+    public function getVote($max=10){
+        return rand(5,$max) . "/10";
+    }
 }
 
 $movie_comedy = new Movies(1, "UNA NOTTE DA LEONI","The Hangover","Comedy",2012);
@@ -68,6 +71,12 @@ $movie_thriller = new Movies(4, "IL SILENZIO DEGLI INNOCENTI","The Silence of th
                 <?php echo $movie_comedy->year ?>
                 </h6>
             </li>
+            <li>
+                <h6>VOTO:
+                <?php echo $movie_comedy->getVote() ?>
+                </h6>
+            </li>
+
         </ul>
     </div>
     <div>
@@ -95,6 +104,11 @@ $movie_thriller = new Movies(4, "IL SILENZIO DEGLI INNOCENTI","The Silence of th
             <li>
                 <h6>
                 <?php echo $movie_drama->year ?>
+                </h6>
+            </li>
+            <li>
+                <h6>VOTO:
+                <?php echo $movie_comedy->getVote() ?>
                 </h6>
             </li>
         </ul>
@@ -126,6 +140,11 @@ $movie_thriller = new Movies(4, "IL SILENZIO DEGLI INNOCENTI","The Silence of th
                 <?php echo $movie_documentary->year ?>
                 </h6>
             </li>
+            <li>
+                <h6>VOTO:
+                <?php echo $movie_comedy->getVote() ?>
+                </h6>
+            </li>
         </ul>
     </div>
     <div>
@@ -153,6 +172,11 @@ $movie_thriller = new Movies(4, "IL SILENZIO DEGLI INNOCENTI","The Silence of th
             <li>
                 <h6>
                 <?php echo $movie_thriller->year ?>
+                </h6>
+            </li>
+            <li>
+                <h6>VOTO:
+                <?php echo $movie_comedy->getVote() ?>
                 </h6>
             </li>
         </ul>
