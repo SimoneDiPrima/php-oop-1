@@ -24,10 +24,10 @@ class Movies
     }
 }
 
-$movie_comedy = new Movies(1, "UNA NOTTE DA LEONI","one night from lions","Comedy",2012);
+$movie_comedy = new Movies(1, "UNA NOTTE DA LEONI","The Hangover","Comedy",2012);
 $movie_drama = new Movies(2, "IL MIGLIO VERDE","the green mile","drama",1992);
 $movie_documentary = new Movies(3, "THE SOCIAL DILEMMA","the social dilemma","documentary",2020);
-$movie_thriller = new Movies(4, "IL SILENZIO DEGLI INNOCENTI","THE BUTTERFLY EFFECT","THRILLER",1988);
+$movie_thriller = new Movies(4, "IL SILENZIO DEGLI INNOCENTI","The Silence of the Lambs","THRILLER",1988);
 
 
 ?>
