@@ -25,6 +25,10 @@ class Movies
     public function getVote($max=10){
         return rand(5,$max) . "/10";
     }
+    public function getLink(){
+        return $this->originalname;
+    }
+
 }
 
 $movie_comedy = new Movies(1, "UNA NOTTE DA LEONI","The Hangover","Comedy",2012);
@@ -76,6 +80,11 @@ $movie_thriller = new Movies(4, "IL SILENZIO DEGLI INNOCENTI","The Silence of th
                 <?php echo $movie_comedy->getVote() ?>
                 </h6>
             </li>
+            <li>
+                <h6>Link recensione:
+                <a href="www.google.it"><?php echo $movie_comedy->getLink()?></a>
+                </h6>
+            </li>
 
         </ul>
     </div>
@@ -108,7 +117,12 @@ $movie_thriller = new Movies(4, "IL SILENZIO DEGLI INNOCENTI","The Silence of th
             </li>
             <li>
                 <h6>VOTO:
-                <?php echo $movie_comedy->getVote() ?>
+                <?php echo $movie_drama->getVote() ?>
+                </h6>
+            </li>
+            <li>
+                <h6>Link recensione:
+                <a href="www.google.it"> <?php echo $movie_drama->getLink()?> </a>
                 </h6>
             </li>
         </ul>
@@ -142,7 +156,12 @@ $movie_thriller = new Movies(4, "IL SILENZIO DEGLI INNOCENTI","The Silence of th
             </li>
             <li>
                 <h6>VOTO:
-                <?php echo $movie_comedy->getVote() ?>
+                <?php echo $movie_documentary->getVote() ?>
+                </h6>
+            </li>
+            <li>
+                <h6>Link recensione:
+                <a href="www.google.it"><?php echo $movie_documentary->getLink()?></a>
                 </h6>
             </li>
         </ul>
@@ -176,12 +195,21 @@ $movie_thriller = new Movies(4, "IL SILENZIO DEGLI INNOCENTI","The Silence of th
             </li>
             <li>
                 <h6>VOTO:
-                <?php echo $movie_comedy->getVote() ?>
+                <?php echo $movie_thriller->getVote() ?>
+                </h6>
+            </li>
+            <li>
+                <h6>Link recensione:
+                <a href="www.google.it"><?php echo $movie_thriller->getLink()?></a>
                 </h6>
             </li>
         </ul>
     </div>
-    
+    <style>
+        ul{list-style-type:none;}
+        a{  text-decoration:none;
+            color:red}
+    </style>
 </body>
 </html>
 
